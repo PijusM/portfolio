@@ -12,16 +12,19 @@ html{
     font-family: eina;
     src: url(./fonts/Eina01-Regular.ttf);
 }
-header{
+#header{
     background-color: #161B21;
     width: 100%;
     height: 100px;
     position: fixed;
     display: flex;
+    transition: all 0.35s ease-in-out;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     border-bottom: 2px solid white;
+    top: 0;
+    overflow: hidden;
 }
 
 .logo{
