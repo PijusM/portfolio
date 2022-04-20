@@ -12,5 +12,5 @@ window.addEventListener("scroll", function(){
 })
 ityped.init(document.querySelector(".typetext"), {
     showCursor: true,
-    strings: ['Web Developer', 'Graphic Designer', 'Learner']
+    strings: ['web developer.', 'graphic designer.', 'learner.']
   })
