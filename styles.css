@@ -129,6 +129,8 @@ html{
     .infocontainer{
         height: 200px;
         gap: 5px;
-
+    }
+    #header{
+        height: 80px;
     }
 }
