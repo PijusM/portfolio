@@ -10,3 +10,7 @@ window.addEventListener("scroll", function(){
     }
     lastpos=scrolltop;
 })
+ityped.init(document.querySelector(".typetext"), {
+    showCursor: true,
+    strings: ['Web Developer', 'Graphic Designer', 'Learner']
+  })
