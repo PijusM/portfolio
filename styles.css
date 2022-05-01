@@ -5,6 +5,15 @@
 body{
     background-color: #161B21;
 }
+.hidden {
+    opacity: 0;
+    transform: translateY(-20vh);
+}
+.visible {
+    opacity: 1;
+    transform: none;
+    transition: all 1s ease-in-out;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -22,7 +31,7 @@ html{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid whitesmoke;
     top: 0;
     overflow: hidden;
 }
@@ -38,14 +47,14 @@ html{
     margin: 0px 50px 0px 0px;
     font-size: 20px;
     font-weight: bold;
+    transition: all 0.3;
     -webkit-transition: all 0.3s ease-out; 
 }
 @media (hover: hover) {
     .nav ul li:hover{
-        color: white;
+        color: whitesmoke;
         font-size: 21px;
         transition: all 0.8s;
-        
     } 
 }
 .nav a {text-decoration: none;}
@@ -80,18 +89,18 @@ html{
     background-color: hsl(0, 0%, 100%, 6%);
     position: relative;
     top: 125px;
-    height: 281px;
+    height: 800px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 80px;
 }
 .infocontainer h1{
     font-size: 51px;
     color: #F4A950;
     font-family: eina;
-    margin-top: -20px;
     text-shadow: 6px 6px 7px #272727;
 }
 .infocontainer h2{
@@ -99,20 +108,59 @@ html{
     color: #F4A950;
     font-family: eina;
 }
+.logoinfo{
+    width: 600px;
+    margin-top: -150px;
+}
 .separator{
-    border-bottom: 7px solid white;
+    border-bottom: 7px solid whitesmoke;
     width: 100%;
     top: 150px;
     position: relative;
-    margin-bottom: 1000px;
+    margin-bottom: 200px;
 }
+
+.designs h1{
+    color:#F4A950;
+    margin-bottom: 50px;
+    font-family: eina;
+    font-size: 50px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    border-bottom: 4px solid whitesmoke;
+    padding: 0px 50px 7px 50px;
+    width:fit-content;
+}
+.examplebox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.exampleimg {
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+  }
+.exampleimg.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
 @media only screen and (max-width: 767px){
     .nav ul li{
         font-size: 14px;
         margin: 0 15px 10px 0;
     }
     .nav ul li:active{
-        color: white;
+        color: whitesmoke;
     }
     .logo{
         width: 80px;
