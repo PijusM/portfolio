@@ -1,6 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box; 
+        
 }
 body{
     background-color: #161B21;
@@ -97,20 +101,23 @@ html{
     text-align: center;
     gap: 80px;
 }
-.infocontainer h1{
+.text{
+    margin: 0px 50px 0px 10px;
+}
+.text h1{
     font-size: 51px;
     color: #F4A950;
     font-family: eina;
     text-shadow: 6px 6px 7px #272727;
 }
-.infocontainer h2{
+.text h2{
     font-size: 32px;
     color: #F4A950;
     font-family: eina;
 }
 .logoinfo{
     width: 600px;
-    margin-top: -150px;
+    margin: -150px 10px 0px 50px;
 }
 .separator{
     border-bottom: 7px solid whitesmoke;
@@ -134,15 +141,19 @@ html{
 .examplebox{
     display: flex;
     flex-wrap: wrap;
-    gap: 35px;
     margin: 0 auto;
-    width: 80%;
+    width: 65%;
+    align-items: center;
     justify-content: space-around;
 }
 
 .exampleimg {
-    max-width: 500px;
+    display: block;
+    max-width: 35%;
+    height: fit-content;
     opacity: 0;
+    margin: 10px;
+    border: 10px solid #F4A950;
     transform: translateY(20vh);
     visibility: hidden;
     transition: opacity 0.6s ease-out, transform 1.2s ease-out;
@@ -153,11 +164,36 @@ html{
     transform: none;
     visibility: visible;
 }
-
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 1300px) {
+    .infocontainer{
+        height: 530px;
+    }
+    .nav ul li:hover{
+        color: whitesmoke;
+        font-size: 8px;
+        transition: all 0.8s;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .infocontainer{
+        height: 650px;
+    }
+    .nav ul li:hover{
+        color: whitesmoke;
+        font-size: 13px;
+        transition: all 0.8s;
+    }
+}
+@media only screen and (max-width: 800px){
+    
     .nav ul li{
-        font-size: 14px;
+        font-size: 12px;
         margin: 0 15px 10px 0;
+    }
+    .nav ul li:hover{
+        color: whitesmoke;
+        font-size: 13px;
+        transition: all 0.8s;
     }
     .nav ul li:active{
         color: whitesmoke;
@@ -168,17 +204,34 @@ html{
     }
     .infocontainer h1{
         margin-top: 0px;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: bold;
     }
     .infocontainer h2{
-        font-size: 20px;
+        font-size: 17px;
     }
     .infocontainer{
-        height: 200px;
-        gap: 5px;
+        height: 350px;
+        gap: 10px;
+    }
+    .text{
+        margin: 0px 20px 0px 0px;
+    }
+    .logoinfo{
+        margin: -35px 0px 0px 20px;
+        width: 70%;
     }
     #header{
-        height: 80px;
+        height: 100px;
+        justify-content: space-between;
+    }
+    .exampleimg{
+        max-width: 300px;
+    }
+    .ityped-cursor{
+        font-size: 17px;
+    }
+    .designs h1{
+        font-size: 32px;
     }
 }
