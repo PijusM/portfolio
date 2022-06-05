@@ -164,6 +164,48 @@ html{
     transform: none;
     visibility: visible;
 }
+#websites{
+    display:flex;
+    width: 100%;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.website a{
+    text-decoration: none;
+}
+.website{
+    width: 400px;
+    height: 140px;
+    background-color: #272727;
+    border-radius: 25px;
+    border:#F4A950 5px solid;
+    text-align: center;
+    font-family: eina;
+    transition: all 0.5s;
+    margin-bottom: 50px;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+.website.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+.website a h1{
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 5%;
+    transition: all 0.5s;
+}
+.website p{color:white;}
+.website h1:hover{
+    font-size: 33px;
+    color:white;
+    transition: all 0.5s;
+}
 @media only screen and (max-width: 1300px) {
     .infocontainer{
         height: 530px;
@@ -185,7 +227,15 @@ html{
     }
 }
 @media only screen and (max-width: 800px){
-    
+    .website{
+        height: 120px
+    }
+    .website a h1{
+        font-size: 20px;
+    }
+    .website p{
+        font-size: 15px;
+    }
     .nav ul li{
         font-size: 12px;
         margin: 0 15px 10px 0;
